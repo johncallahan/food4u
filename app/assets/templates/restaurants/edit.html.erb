@@ -1,0 +1,54 @@
+<form name="editRestaurant">
+  <fieldset>
+    <legend>
+      Edit Restaurant
+    </legend>
+      <div class="control-group">
+        <label class="control-label">
+          Name
+        </label>
+        <div class="controls">
+            <input type="text"
+                   name="restaurant[name]"
+                   ng-model="restaurant.name"
+                   class="text_field"
+                   required>
+          <span ng-show="editRestaurant.name.$error.required"
+                class="help-inline">
+            Required
+          </span>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label">
+          Rating
+        </label>
+        <div class="controls">
+            <input type="number"
+                   name="restaurant[rating]"
+                   ng-model="restaurant.rating"
+                   class="number_field"
+                   required>
+          <span ng-show="editRestaurant.rating.$error.required"
+                class="help-inline">
+            Required
+          </span>
+        </div>
+      </div>
+    <div class="form-actions">
+      <button class="btn btn-success" ng-click="save()"
+        ng-disabled="isClean() || editRestaurant.$invalid">
+        Save
+      </button>
+      <button ng-click="destroy()"
+              ng-show="restaurant.id"
+              class="btn btn-danger">
+              <i class="icon-trash"></i>Delete
+      </button>
+      <a href="/restaurants" class="btn">
+        Back to restaurants
+      </a>
+    </div>
+  </fieldset>
+</form>
+

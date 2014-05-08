@@ -1,0 +1,37 @@
+<h1>Restaurants</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+        <th>Name</th>
+        <th>Rating</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="restaurant in restaurants">
+      <td>
+        <a href="/restaurants/{{restaurant.id}}">
+          {{restaurant.name}}
+        </a>
+      </td>
+        <td>
+          {{restaurant.rating}}
+        </td>
+      <td>
+        <a href="/restaurants/{{restaurant.id}}/edit"
+          class="btn btn-primary"><i class="icon-edit"></i>
+          Edit
+        </a>
+        <button ng-click="destroy()" class="btn btn-danger">
+          <i class="icon-trash"></i> Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <a href='/restaurants/new' class="btn btn-primary">
+    <i class="icon-plus"></i>New
+  </a>
+</p>

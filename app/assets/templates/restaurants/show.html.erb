@@ -1,0 +1,25 @@
+<h1>Restaurant</h1>
+
+<p>
+  <b>Name</b><br>
+  {{restaurant.name}}
+</p>
+
+<p>
+  <b>Rating</b><br>
+  {{restaurant.rating}}
+</p>
+
+<div class="form-actions">
+  <a href="/restaurants/{{restaurant.id}}/edit"
+    class="btn btn-primary"><i class="icon-edit"></i>
+    Edit Restaurant
+  </a>
+  <button ng-click="destroy()" class="btn btn-danger">
+    <i class="icon-trash"></i> Delete
+  </button>
+  <a href="/restaurants" class="btn">
+    Back to restaurants
+  </a>
+</div>
+

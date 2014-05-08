@@ -1,13 +1,25 @@
 root = global ? window
 angular = root.angular
 
-thisApp = angular.module("Food4uClient", ['ngCookies']).config(['$routeProvider', '$locationProvider' , 
+thisApp = angular.module("Food4uClient", ['ngCookies', 'restaurants']).config(['$routeProvider', '$locationProvider' , 
 ($routeProvider, $locationProvider) ->
   #$locationProvider.hashPrefix('');
   $locationProvider.html5Mode true
   $routeProvider.when("/",
     controller: "WelcomeCtrl"
     templateUrl: "<%= asset_path('welcome/index.html') %>"
+  ).when("/restaurants", 
+    controller: RestaurantsIndexCtrl
+    templateUrl: '<%= asset_path("restaurants/index.html") %>'
+  ).when("/restaurants/new",
+    controller: RestaurantsCreateCtrl
+    templateUrl: '<%= asset_path("restaurants/new.html") %>'
+  ).when("/restaurants/:id",
+    controller: RestaurantsShowCtrl
+    templateUrl: '<%= asset_path("restaurants/show.html") %>'
+  ).when("/restaurants/:id/edit",
+    controller: RestaurantsEditCtrl
+    templateUrl: '<%= asset_path("restaurants/edit.html") %>'
   ).otherwise redirectTo: "/"
 ])
 
