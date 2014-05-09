@@ -5,6 +5,7 @@ gem 'rails', '4.0.0'
 
 # login support
 gem 'devise', '~> 3.2.0'
+gem 'devise_google_authenticator', '~> 0.3.7'
 
 # angular and bootstrap
 gem 'angularjs_scaffold'

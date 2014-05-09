@@ -43,6 +43,11 @@ GEM
       railties (>= 3.2.6, < 5)
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise_google_authenticator (0.3.14)
+      actionmailer (>= 3.2.12)
+      devise (>= 3.2.0)
+      railties (>= 3.0)
+      rotp (~> 1.4.0)
     erubis (2.7.0)
     execjs (2.0.2)
     hike (1.2.3)
@@ -82,6 +87,7 @@ GEM
     rake (10.3.1)
     rdoc (4.1.1)
       json (~> 1.4)
+    rotp (1.4.6)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -122,6 +128,7 @@ DEPENDENCIES
   angularjs_scaffold
   coffee-rails (~> 4.0.0)
   devise (~> 3.2.0)
+  devise_google_authenticator (~> 0.3.7)
   jbuilder (~> 1.2)
   jquery-rails
   pg
