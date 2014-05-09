@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+# login support
+gem 'devise', '~> 3.2.0'
+
 # angular and bootstrap
 gem 'angularjs_scaffold'
 

@@ -1,5 +1,7 @@
 class RestaurantsController < ApplicationController
-respond_to :json
+  layout "angularjsapp"
+
+  respond_to :json
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 
   # GET /restaurants
