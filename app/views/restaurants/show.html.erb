@@ -10,5 +10,10 @@
   <%= @restaurant.rating %>
 </p>
 
+<p>
+  <strong>Tags:</strong>
+  <%= @restaurant.tag_list %>
+</p>
+
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>

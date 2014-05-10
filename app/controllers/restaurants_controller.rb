@@ -28,6 +28,9 @@ class RestaurantsController < ApplicationController
   # POST /restaurants.json
   def create
     @restaurant = Restaurant.new(restaurant_params)
+    if params[:tag_list]
+      @restaurant.tag_list = params[:tag_list]
+    end
 
     respond_to do |format|
       if @restaurant.save
@@ -45,6 +48,10 @@ class RestaurantsController < ApplicationController
   def update
     respond_to do |format|
       if @restaurant.update(restaurant_params)
+        if params[:tag_list]
+	  @restaurant.tag_list = params[:tag_list]
+          @restaurant.save
+        end
         format.html { redirect_to @restaurant, notice: 'Restaurant was successfully updated.' }
         format.json { head :no_content }
       else
@@ -72,6 +79,6 @@ class RestaurantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def restaurant_params
-      params.require(:restaurant).permit(:name, :rating)
+      params.require(:restaurant).permit(:name, :rating, :tag_list)
     end
 end
