@@ -54,9 +54,9 @@
             <div ng-controller="TagsIndexCtrl" class="span3">
               <div class="well sidebar-nav">
                 <h3>Tags</h3>
-                <ul class="nav nav-list" ng-repeat="tag in tags">
-		  <li ng-click="onTagClick(tag.name)">{{tag.name}}</li>
-                </ul>
+		  <label ng-repeat="tag in tags">
+                    <input type="radio" value="{{tag.name}}" name="tagName" ng-model="$parent.currentTag"/>{{tag.name}}
+                  </label>
               </div><!--/.well -->
             </div><!--/span-->
         </div><!--/row-->

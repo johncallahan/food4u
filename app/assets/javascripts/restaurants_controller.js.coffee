@@ -19,6 +19,7 @@ RestaurantsIndexCtrl = ($scope, $rootScope, Restaurant) ->
 
   $scope.removeTag = () ->
     $scope.currentTag = ''
+    $rootScope.$emit 'someEvent', "hello there"
 
   $scope.destroy = ->
     if confirm("Are you sure?")

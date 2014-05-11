@@ -3,12 +3,15 @@ root = global ? window
 
 TagsIndexCtrl = ($scope, $rootScope, Tag) ->
   $scope.tags = Tag.query()
+  $scope.currentTag = ''
 
   $rootScope.$on 'someEvent', (event, args) ->
+    $scope.currentTag = ''
     $scope.tags = Tag.query()
 
-  $scope.onTagClick = (tagname) ->
-    $rootScope.$emit 'anotherEvent', tagname
+  $scope.$watch 'currentTag', (value) ->
+    console.log value
+    $rootScope.$emit 'anotherEvent', value
 
 TagsIndexCtrl.$inject = ['$scope', '$rootScope', 'Tag'];
 
