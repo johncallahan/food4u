@@ -46,6 +46,17 @@
                    class="text_field">
         </div>
       </div>
+      <div class="control-group">
+        <label class="control-label">
+          Comment
+        </label>
+        <div class="controls">
+            <input type="text"
+                   name="restaurant[comment]"
+                   ng-model="restaurant.comment"
+                   class="text_field">
+        </div>
+      </div>
     <div class="form-actions">
       <button class="btn btn-success" ng-click="save()"
         ng-disabled="isClean() || editRestaurant.$invalid">

@@ -5,7 +5,7 @@
         <th>Name</th>
         <th>Rating</th>
         <th>Tags</th>
-      <th>Actions</th>
+        <th>Comment</th>
     </tr>
   </thead>
   <tbody>
@@ -22,13 +22,7 @@
 	{{restaurant.tag_list.join(', ')}}
       </td>
       <td>
-        <a href="/restaurants/{{restaurant.id}}/edit"
-          class="btn btn-primary"><i class="icon-edit"></i>
-          Edit
-        </a>
-        <button ng-click="destroy()" class="btn btn-danger">
-          <i class="icon-trash"></i> Delete
-        </button>
+	{{restaurant.comment}}
       </td>
     </tr>
   </tbody>
