@@ -10,6 +10,12 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
   end
 
+  # GET /tags
+  # GET /tags.json
+  def tags
+    @tags = Restaurant.tag_counts_on(:tags)
+  end
+
   # GET /restaurants/1
   # GET /restaurants/1.json
   def show

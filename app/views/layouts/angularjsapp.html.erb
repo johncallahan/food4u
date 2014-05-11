@@ -51,15 +51,11 @@
           <!-- templates load here -->
           <div ng-view class="span9"></div>
           <!-- templates load here -->
-            <div class="span3">
+            <div ng-controller="TagsIndexCtrl" class="span3">
               <div class="well sidebar-nav">
-                <h3>Sidebar</h3>
-                <ul class="nav nav-list">
-                  <li class="nav-header">Sidebar</li>
-                  <!-- sidebar menu models -->
-                  <li><%= link_to "Link1", "/path1"  %></li>
-                  <li><%= link_to "Link2", "/path2"  %></li>
-                  <li><%= link_to "Link3", "/path3"  %></li>
+                <h3>Tags</h3>
+                <ul class="nav nav-list" ng-repeat="tag in tags">
+		  <li ng-click="onTagClick(tag.name)">{{tag.name}}</li>
                 </ul>
               </div><!--/.well -->
             </div><!--/span-->

@@ -1,22 +1,26 @@
-<h1>Restaurants</h1>
+<h1>Restaurants <span ng-show="currentTag != ''"><small>({{currentTag}} <span ng-click="removeTag()" class="icon-remove"></span>)</small></span></h1>
 <table class="table table-striped">
   <thead>
     <tr>
         <th>Name</th>
         <th>Rating</th>
+        <th>Tags</th>
       <th>Actions</th>
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="restaurant in restaurants">
+    <tr ng-repeat="restaurant in restaurants | filter:myFilter(currentTag)">
       <td>
         <a href="/restaurants/{{restaurant.id}}">
           {{restaurant.name}}
         </a>
       </td>
-        <td>
-          {{restaurant.rating}}
-        </td>
+      <td>
+        {{restaurant.rating}}
+      </td>
+      <td>
+	{{restaurant.tag_list.join(', ')}}
+      </td>
       <td>
         <a href="/restaurants/{{restaurant.id}}/edit"
           class="btn btn-primary"><i class="icon-edit"></i>

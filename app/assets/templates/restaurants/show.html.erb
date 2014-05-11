@@ -10,6 +10,11 @@
   {{restaurant.rating}}
 </p>
 
+<p>
+  <b>Tags</b><br>
+  {{restaurant.tag_list.join(', ')}}
+</p>
+
 <div class="form-actions">
   <a href="/restaurants/{{restaurant.id}}/edit"
     class="btn btn-primary"><i class="icon-edit"></i>
