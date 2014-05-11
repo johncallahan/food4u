@@ -1,4 +1,4 @@
-<h1>Restaurants <small>{{(restaurants|filter:myFilter(currentTag)).length}} of {{restaurants.length}}</small><span ng-show="currentTag != ''"><small> ({{currentTag}} <span ng-click="removeTag()" class="icon-remove"></span>)</small></span></h1>
+<h1>Restaurants <small> {{(restaurants|filter:myFilter(currentTag)).length}} of {{restaurants.length}}</small><span ng-show="currentTag != ''"><small> ({{currentTag}} <span ng-click="removeTag()" class="icon-remove"></span>)</small></span></h1>
 <table class="table table-striped">
   <thead>
     <tr>
