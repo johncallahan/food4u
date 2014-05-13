@@ -12,6 +12,7 @@
  *= require bootstrap/bootstrap.min.css
  *= require bootstrap/bootstrap-responsive.min.css
  *= require fontawesome/font-awesome.css
+ *= require leaflet/leaflet.css
  *= require_tree .
  */
 

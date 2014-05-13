@@ -49,9 +49,12 @@
       <div class="content">
         <div class="row">
           <!-- templates load here -->
-          <div ng-view class="span9"></div>
+          <div ng-view class="span4"></div>
+	  <div class="span6" ng-controller="RestaurantsIndexCtrl">
+	    <leaflet width="600px" height="480px"></leaflet>
+	  </div>
           <!-- templates load here -->
-            <div ng-controller="TagsIndexCtrl" class="span3">
+            <div ng-controller="TagsIndexCtrl" class="span2">
               <div class="well sidebar-nav">
                 <h3>Tags</h3>
 		  <label ng-repeat="tag in tags">

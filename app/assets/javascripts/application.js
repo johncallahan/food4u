@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require_tree ./angularjs/
 //= require_tree ./bootstrap/
+//= require_tree ./leaflet/
 //= require turbolinks
 //= require_tree .

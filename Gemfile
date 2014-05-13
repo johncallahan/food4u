@@ -12,6 +12,9 @@ gem 'devise_google_authenticator', '~> 0.3.7'
 # angular and bootstrap
 gem 'angularjs_scaffold'
 
+# leaflet support
+gem "angular-leaflet-rails"
+
 # tagging
 gem 'acts-as-taggable-on'
 

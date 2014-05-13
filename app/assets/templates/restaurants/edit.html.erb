@@ -57,6 +57,30 @@
                    class="text_field">
         </div>
       </div>
+      <div class="control-group">
+        <label class="control-label">
+          Latitude
+        </label>
+        <div class="controls">
+            <input type="number"
+                   step="any"
+                   name="restaurant[latitude]"
+                   ng-model="restaurant.latitude"
+                   class="number_field">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label">
+          Longitude
+        </label>
+        <div class="controls">
+            <input type="number"
+                   step="any"
+                   name="restaurant[longitude]"
+                   ng-model="restaurant.longitude"
+                   class="number_field">
+        </div>
+      </div>
     <div class="form-actions">
       <button class="btn btn-success" ng-click="save()"
         ng-disabled="isClean() || editRestaurant.$invalid">
