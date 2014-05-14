@@ -8,6 +8,7 @@ RestaurantsIndexCtrl = ($scope, $rootScope, leafletEvents, leafletData, Restaura
     leafletData.getMap().then((map) ->
       for r in rs
         marker = L.marker([r.latitude,r.longitude],{icon:L.divIcon {className: 'leaflet-div-icon'}})
+        marker.bindPopup(r.name)
         map.addLayer(marker)
         markers.push(marker)
     )
@@ -24,12 +25,14 @@ RestaurantsIndexCtrl = ($scope, $rootScope, leafletEvents, leafletData, Restaura
       for r in $scope.restaurants
         if tagname == ''
           marker = L.marker([r.latitude,r.longitude],{icon:L.divIcon {className: 'leaflet-div-icon'}})
+          marker.bindPopup(r.name)
           map.addLayer(marker)
           markers.push(marker)
         else
           for i in r.tag_list
             if i == tagname
               marker = L.marker([r.latitude,r.longitude],{icon:L.divIcon {className: 'leaflet-div-icon'}})
+              marker.bindPopup(r.name)
               map.addLayer(marker)
               markers.push(marker)
     )
@@ -42,14 +45,6 @@ RestaurantsIndexCtrl = ($scope, $rootScope, leafletEvents, leafletData, Restaura
         if i == tagname
           return input
       false
-
-  $scope.$on 'leafletDirectiveMap.click', (e) ->
-    leafletData.getMap().then((map) ->
-      for r in $scope.restaurants
-        marker = L.marker([r.latitude,r.longitude],{icon:L.divIcon {className: 'leaflet-div-icon'}})
-        map.addLayer(marker)
-        markers.push(marker)
-    )
 
   $scope.removeTag = () ->
     $scope.currentTag = ''
