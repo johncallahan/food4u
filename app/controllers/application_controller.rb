@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  force_ssl unless Rails.env.development?
+  force_ssl unless Rails.env.development? || Rails.env.test?
   before_action :authenticate_user!
 
   # Prevent CSRF attacks by raising an exception.
