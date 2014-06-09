@@ -58,7 +58,7 @@
               <div class="well sidebar-nav">
                 <h3>Tags</h3>
 		  <label ng-repeat="tag in tags">
-                    <input type="radio" value="{{tag.name}}" name="tagName" ng-model="$parent.currentTag"/>{{tag.name}}
+                    <input id="{{tag.name}}" type="radio" value="{{tag.name}}" name="tagName" ng-model="$parent.currentTag"/>{{tag.name}}
                   </label>
               </div><!--/.well -->
             </div><!--/span-->

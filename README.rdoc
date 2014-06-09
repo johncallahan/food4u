@@ -1,28 +1,23 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple Heorku-deployable site (Rails & Postgres free developer's
+version) of a restaurant listing site for personal use.
 
-Things you may want to cover:
+* Ruby 2.1 / Rails 4.0.0
 
-* Ruby version
+* Postgres
 
-* System dependencies
-
-* Configuration
+== Local Installation
 
 * Database creation
 
 * Database initialization
 
-* How to run the test suite
+== Heroku deployment
 
-* Services (job queues, cache servers, search engines, etc.)
+* Database creation
 
-* Deployment instructions
+* Database initialization
 
-* ...
+== Testing
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
