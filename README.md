@@ -3,7 +3,8 @@ version) of a restaurant listing site for personal use.
 
 # Installation (Heroku)
 
-You'll need a Heroku account and the toolbelt installed first: 
+You'll need a Heroku account and the toolbelt installed first at
+https://toolbelt.heroku.com/
 
 ```shell
 % git clone https://github.com/johncallahan/food4u.git
