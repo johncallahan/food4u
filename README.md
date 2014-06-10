@@ -1,7 +1,7 @@
 A simple Heroku-deployable site (Rails & Postgres free developer's
 version) of a restaurant listing site for personal use.
 
-# Installation (Local and Heroku)
+# Installation (Heroku)
 
 You'll need a Heroku account and the toolbelt installed first: 
 
@@ -59,7 +59,7 @@ herok open
 You should no longer see the registration and "forgot password" links
 on the login page.
 
-# Installation (local)
+# Installation (Local)
 
 TBD
 
