@@ -60,6 +60,12 @@ herok open
 You should no longer see the registration and "forgot password" links
 on the login page.
 
+# Updates
+
+```shell
+git remote update origin
+```
+
 # Installation (Local)
 
 TBD
