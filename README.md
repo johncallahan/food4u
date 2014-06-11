@@ -63,7 +63,7 @@ on the login page.
 # Updates
 
 ```shell
-git remote update origin
+git pull
 ```
 
 # Installation (Local)
